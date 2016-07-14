@@ -1,0 +1,72 @@
+{
+  "bank1": {
+    "personal": [
+      {
+        "id": "q",
+        "balance": 4,
+        "bankId": "bank1"
+      }
+    ],
+    "correspondent": [
+      {
+        "id": "q2",
+        "balance": 4,
+        "bankId": "bank1",
+        "referralBankId": "bank2"
+      },
+{
+        "id": "q3",
+        "balance": 4,
+        "bankId": "bank1",
+        "referralBankId": "bank3"
+      }
+    ]
+  },
+   "bank2": {
+    "personal": [
+      {
+        "id": "w",
+        "balance": 4,
+        "bankId": "bank2"
+      }
+    ],
+    "correspondent": [
+      {
+        "id": "w1",
+        "balance": 4,
+        "bankId": "bank2",
+        "referralBankId": "bank1"
+      },
+{
+        "id": "w3",
+        "balance": 4,
+        "bankId": "bank2",
+        "referralBankId": "bank3"
+      }
+    ]
+  }
+,
+   "bank3": {
+    "personal": [
+      {
+        "id": "e",
+        "balance": 4,
+        "bankId": "bank3"
+      }
+    ],
+    "correspondent": [
+      {
+        "id": "e1",
+        "balance": 4,
+        "bankId": "bank3",
+        "referralBankId": "bank1"
+      },
+{
+        "id": "e2",
+        "balance": 4,
+        "bankId": "bank3",
+        "referralBankId": "bank2"
+      }
+    ]
+  }
+}
