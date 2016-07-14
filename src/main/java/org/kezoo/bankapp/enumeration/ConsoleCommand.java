@@ -10,7 +10,8 @@ public enum ConsoleCommand {
     GETALL("getall", "print list of all accounts. Usage : 'getall'"),
     HELP("help", "print help. Usage :'help'"),
     SEND("send", "transfer money between accounts. Usage :'send {account_id from} {account_id to} {amount}'"),
-    CURRENT_BANK("cur", "print bank name of application instance. Usage :'cur'");
+    CURRENT_BANK("cur", "print bank name of application instance. Usage :'cur'"),
+    QUIT("quit", "shutdown application");
 
     private String name;
     private String description;

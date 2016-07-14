@@ -37,7 +37,7 @@ public class ConsoleCommandListenerImpl implements ConsoleCommandListener {
             BufferedReader in = new BufferedReader(converter);
             String curLine = "";
 
-            while (!("quit".equals(curLine))) {
+            while (true) {
                 try {
                     curLine = in.readLine();
                     processInput(curLine);
@@ -45,9 +45,6 @@ public class ConsoleCommandListenerImpl implements ConsoleCommandListener {
                     log.error("failed to process input {}", curLine, e);
                 }
             }
-            taskExecutionQueue.shutdown();
-            Ignition.stop(true);
-            System.exit(0);
         }).start();
     }
 
@@ -84,10 +81,19 @@ public class ConsoleCommandListenerImpl implements ConsoleCommandListener {
             case CURRENT_BANK:
                 print(Application.bankName);
                 break;
+            case QUIT:
+                shutdown();
+                break;
         }
     }
 
     private void print(Object s) {
         System.out.println(s);
+    }
+
+    private void shutdown() {
+        taskExecutionQueue.shutdown();
+        Ignition.stop(true);
+        System.exit(0);
     }
 }
